@@ -12,6 +12,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.testcontainers.DockerClientFactory;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
@@ -81,5 +82,15 @@ class OrderControllerIntegrationTest {
                 restTemplate.getForEntity("/orders/999999", String.class);
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+    }
+
+    @Test
+    void testDockerConnection() {
+        var client = DockerClientFactory.instance().client();
+
+        System.out.println(
+                "Docker server version: " +
+                        client.infoCmd().exec().getServerVersion()
+        );
     }
 }

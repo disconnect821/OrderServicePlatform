@@ -15,10 +15,11 @@
     <artifactId>order-platform</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>order-platform</name>
-    <description>Stage 1: basic order management CRUD (learning project)</description>
+
 
     <properties>
         <java.version>21</java.version>
+        <testcontainers.version>1.20.4</testcontainers.version>
     </properties>
 
     <dependencies>
@@ -37,6 +38,7 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
+            <version>42.7.12</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>

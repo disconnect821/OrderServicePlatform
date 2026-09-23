@@ -17,6 +17,6 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     // unsafe for Stage 1 - pessimistic/optimistic locking is Stage 2.
 
     // PESSIMISTIC LOCKING: select ... for update to prevent race conditions
-    @Query("select p from Product p where p.id = :id for update")
+    @Query("select p from Product p where p.id = :id")
     Optional<Product> findByIdWithLock(@Param("id") Long id);
 }
