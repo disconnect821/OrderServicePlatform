@@ -33,4 +33,6 @@ public class ProductService {
                 .orElseThrow(() -> new ResourceNotFoundException("Product " + id + " not found"));
         return ProductResponse.from(product);
     }
+
+    //Delete All products
 }

@@ -12,13 +12,17 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.testcontainers.DockerClientFactory;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -85,12 +89,69 @@ class OrderControllerIntegrationTest {
     }
 
     @Test
-    void testDockerConnection() {
-        var client = DockerClientFactory.instance().client();
+    void createOrder_withPessimisticLocking_allowsOnlyConcurrentStockUnits() throws Exception {
+        // Arrange: Create a product with only 2 units available
+        Product product = productRepository.save(
+                new Product("SKU-WIDGET-CONCURRENT", "Widget Concurrent", new BigDecimal("10.00"), 2));
 
-        System.out.println(
-                "Docker server version: " +
-                        client.infoCmd().exec().getServerVersion()
-        );
+        int totalRequests = 5;
+        int orderQuantity = 1; // Each order requests 1 unit
+        ExecutorService executorService = Executors.newFixedThreadPool(totalRequests);
+        List<Future<ResponseEntity<OrderResponse>>> futures = new ArrayList<>();
+
+        // Create request for each concurrent order
+        CreateOrderRequest request = new CreateOrderRequest(
+                201L,
+                List.of(new OrderItemRequest(product.getId(), orderQuantity)));
+
+        // Submit all concurrent requests
+        for (int i = 0; i < totalRequests; i++) {
+            final int requestIndex = i;
+            Callable<ResponseEntity<OrderResponse>> callable = () -> {
+                try {
+                    return restTemplate.postForEntity("/orders", request, OrderResponse.class);
+                } catch (Exception e) {
+                    // Return a response indicating the failure
+                    return ResponseEntity.status(HttpStatus.CONFLICT).build();
+                }
+            };
+            futures.add(executorService.submit(callable));
+        }
+
+        // Collect results
+        List<ResponseEntity<OrderResponse>> results = new ArrayList<>();
+        int successfulOrders = 0;
+        for (Future<ResponseEntity<OrderResponse>> future : futures) {
+            ResponseEntity<OrderResponse> response = future.get();
+            results.add(response);
+            if (response.getStatusCode() == HttpStatus.CREATED) {
+                successfulOrders++;
+            }
+        }
+
+        // Clean up executor
+        executorService.shutdown();
+
+        // Assert: With pessimistic locking and 2 units available,
+        // only 2 orders should succeed (one for each unit)
+        assertThat(successfulOrders).isEqualTo(2);
+
+        // Assert: Verify that exactly 2 orders were created
+        long createdOrdersCount = results.stream()
+                .filter(response -> response.getStatusCode() == HttpStatus.CREATED)
+                .count();
+        assertThat(createdOrdersCount).isEqualTo(2);
+
+        // Assert: Verify that the remaining 3 requests failed due to insufficient stock
+        long failedRequestsCount = results.stream()
+                .filter(response -> response.getStatusCode() == HttpStatus.CONFLICT)
+                .count();
+        assertThat(failedRequestsCount).isEqualTo(3);
+
+        // Assert: Verify that stock was properly decremented to 0 (all units sold)
+        Product updatedProduct = productRepository.findById(product.getId())
+                .orElseThrow();
+        assertThat(updatedProduct.getAvailableQuantity()).isEqualTo(0);
     }
+
 }
