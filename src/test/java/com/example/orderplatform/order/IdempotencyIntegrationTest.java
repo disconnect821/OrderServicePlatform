@@ -1,13 +1,12 @@
 package com.example.orderplatform.order;
 
+import com.example.orderplatform.idempotency.IdempotencyKey;
 import com.example.orderplatform.idempotency.IdempotencyKeyRepository;
 import com.example.orderplatform.order.dto.CreateOrderRequest;
 import com.example.orderplatform.product.Product;
 import com.example.orderplatform.product.ProductRepository;
 import com.example.orderplatform.order.dto.OrderItemRequest;
 import com.example.orderplatform.order.dto.OrderResponse;
-import com.example.orderplatform.product.Product;
-import com.example.orderplatform.product.ProductRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +23,7 @@ import java.util.*;
 import java.util.concurrent.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
+
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Testcontainers
@@ -218,6 +217,52 @@ public class IdempotencyIntegrationTest {
         ResponseEntity<OrderResponse> response = restTemplate.postForEntity("/orders", request, OrderResponse.class);
         assertThat(response.getStatusCode().value()).isEqualTo(201);
         assertThat(response.getBody()).isNotNull();
+    }
+
+    @Test
+    void concurrentFirstTimeRequestsWhereFirstFailsAndSecondSucceeds() throws Exception {
+        // Product with exactly 1 unit
+        Product product = productRepository.save(
+                new Product("SKU-ROLLBACK-IDEMP", "Rollback Widget", new BigDecimal("15.00"), 1));
+
+        String rollbackKey = "rollback-key-001";
+
+        // Thread 1: requests 1 unit (will fail due to any failure, rolls back)
+        CreateOrderRequest failRequest = new CreateOrderRequest(
+                7001L,
+                List.of(new OrderItemRequest(product.getId(), 5)),
+                rollbackKey
+        );
+
+        // Thread 2: requests 1 unit (should succeed after rollback/re-insert)
+        CreateOrderRequest successRequest = new CreateOrderRequest(
+                7001L,
+                List.of(new OrderItemRequest(product.getId(), 1)),
+                rollbackKey
+        );
+
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+        List<Future<ResponseEntity<?>>> futures = new ArrayList<>();
+
+        futures.add(executor.submit(() -> restTemplate.postForEntity("/orders", failRequest, String.class)));
+        futures.add(executor.submit(() -> restTemplate.postForEntity("/orders", successRequest, OrderResponse.class)));
+
+        ResponseEntity<String> failResult = (ResponseEntity<String>) futures.get(0).get(10, TimeUnit.SECONDS);
+        ResponseEntity<OrderResponse> successResult = (ResponseEntity<OrderResponse>) futures.get(1).get(10, TimeUnit.SECONDS);
+        executor.shutdown();
+
+        // The failing request should return CONFLICT (400/409)
+        assertThat(failResult.getStatusCode().value()).isNotEqualTo(201);
+
+        // The successful request should return 201 and have saved the response
+        assertThat(successResult.getStatusCode().value()).isEqualTo(201);
+        assertThat(successResult.getBody()).isNotNull();
+        assertThat(successResult.getBody().totalAmount()).isEqualByComparingTo("15.00");
+
+        // Verify idempotency key exists with saved response
+        assertThat(idempotencyKeyRepository.existsById(rollbackKey)).isTrue();
+        IdempotencyKey savedKey = idempotencyKeyRepository.findById(rollbackKey).orElseThrow();
+        assertThat(savedKey.getResponseJson()).isNotNull();
     }
 
     @Test

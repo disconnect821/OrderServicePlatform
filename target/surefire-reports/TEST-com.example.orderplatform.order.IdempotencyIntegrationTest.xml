@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.orderplatform.order.IdempotencyIntegrationTest" time="6.186" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.orderplatform.order.IdempotencyIntegrationTest" time="6.148" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/disconnect/Documents/JavaClaudeProjects/order-platform/target/surefire/surefirebooter-20260927195351370_3.jar /Users/disconnect/Documents/JavaClaudeProjects/order-platform/target/surefire 2026-09-27T19-53-51_310-jvmRun1 surefire-20260927195351370_1tmp surefire_0-20260927195351370_2tmp"/>
+    <property name="sun.java.command" value="/Users/disconnect/Documents/JavaClaudeProjects/order-platform/target/surefire/surefirebooter-20260927214441029_3.jar /Users/disconnect/Documents/JavaClaudeProjects/order-platform/target/surefire 2026-09-27T21-44-40_972-jvmRun1 surefire-20260927214441029_1tmp surefire_0-20260927214441029_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/disconnect/Documents/JavaClaudeProjects/order-platform/target/test-classes:/Users/disconnect/Documents/JavaClaudeProjects/order-platform/target/classes:/Users/disconnect/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.3.5/spring-boot-starter-web-3.3.5.jar:/Users/disconnect/.m2/repository/org/springframework/boot/spring-boot-starter/3.3.5/spring-boot-starter-3.3.5.jar:/Users/disconnect/.m2/repository/org/springframework/boot/spring-boot/3.3.5/spring-boot-3.3.5.jar:/Users/disconnect/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.3.5/spring-boot-starter-logging-3.3.5.jar:/Users/disconnect/.m2/repository/ch/qos/logback/logback-classic/1.5.11/logback-classic-1.5.11.jar:/Users/disconnect/.m2/repository/ch/qos/logback/logback-core/1.5.11/logback-core-1.5.11.jar:/Users/disconnect/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar:/Users/disconnect/.m2/repository/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar:/Users/disconnect/.m2/repository/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar:/Users/disconnect/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/disconnect/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/disconnect/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.3.5/spring-boot-starter-json-3.3.5.jar:/Users/disconnect/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.jar:/Users/disconnect/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.jar:/Users/disconnect/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.jar:/Users/disconnect/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.3.5/spring-boot-starter-tomcat-3.3.5.jar:/Users/disconnect/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31.jar:/Users/disconnect/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.31/tomcat-embed-websocket-10.1.31.jar:/Users/disconnect/.m2/repository/org/springframework/spring-web/6.1.14/spring-web-6.1.14.jar:/Users/disconnect/.m2/repository/org/springframework/spring-beans/6.1.14/spring-beans-6.1.14.jar:/Users/disconnect/.m2/repository/io/micrometer/micrometer-observation/1.13.6/micrometer-observation-1.13.6.jar:/Users/disconnect/.m2/repository/io/micrometer/micrometer-commons/1.13.6/micrometer-commons-1.13.6.jar:/Users/disconnect/.m2/repository/org/springframework/spring-webmvc/6.1.14/spring-webmvc-6.1.14.jar:/Users/disconnect/.m2/repository/org/springframework/spring-aop/6.1.14/spring-aop-6.1.14.jar:/Users/disconnect/.m2/repository/org/springframework/spring-context/6.1.14/spring-context-6.1.14.jar:/Users/disconnect/.m2/repository/org/springframework/spring-expression/6.1.14/spring-expression-6.1.14.jar:/Users/disconnect/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.3.5/spring-boot-starter-data-jpa-3.3.5.jar:/Users/disconnect/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.3.5/spring-boot-starter-aop-3.3.5.jar:/Users/disconnect/.m2/repository/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar:/Users/disconnect/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.3.5/spring-boot-starter-jdbc-3.3.5.jar:/Users/disconnect/.m2/repository/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.jar:/Users/disconnect/.m2/repository/org/springframework/spring-jdbc/6.1.14/spring-jdbc-6.1.14.jar:/Users/disconnect/.m2/repository/org/hibernate/orm/hibernate-core/6.5.3.Final/hibernate-core-6.5.3.Final.jar:/Users/disconnect/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/disconnect/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/disconnect/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/disconnect/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/disconnect/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/disconnect/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/Users/disconnect/.m2/repository/net/bytebuddy/byte-buddy/1.14.19/byte-buddy-1.14.19.jar:/Users/disconnect/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/disconnect/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/disconnect/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/disconnect/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/disconnect/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/disconnect/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/disconnect/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/disconnect/.m2/repository/org/springframework/data/spring-data-jpa/3.3.5/spring-data-jpa-3.3.5.jar:/Users/disconnect/.m2/repository/org/springframework/data/spring-data-commons/3.3.5/spring-data-commons-3.3.5.jar:/Users/disconnect/.m2/repository/org/springframework/spring-orm/6.1.14/spring-orm-6.1.14.jar:/Users/disconnect/.m2/repository/org/springframework/spring-tx/6.1.14/spring-tx-6.1.14.jar:/Users/disconnect/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/Users/disconnect/.m2/repository/org/springframework/spring-aspects/6.1.14/spring-aspects-6.1.14.jar:/Users/disconnect/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.3.5/spring-boot-starter-validation-3.3.5.jar:/Users/disconnect/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.31/tomcat-embed-el-10.1.31.jar:/Users/disconnect/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/disconnect/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/disconnect/.m2/repository/org/postgresql/postgresql/42.7.12/postgresql-42.7.12.jar:/Users/disconnect/.m2/repository/org/flywaydb/flyway-core/10.10.0/flyway-core-10.10.0.jar:/Users/disconnect/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.17.2/jackson-dataformat-toml-2.17.2.jar:/Users/disconnect/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/disconnect/.m2/repository/org/flywaydb/flyway-database-postgresql/10.10.0/flyway-database-postgresql-10.10.0.jar:/Users/disconnect/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar:/Users/disconnect/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar:/Users/disconnect/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar:/Users/disconnect/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.3.5/spring-boot-starter-test-3.3.5.jar:/Users/disconnect/.m2/repository/org/springframework/boot/spring-boot-test/3.3.5/spring-boot-test-3.3.5.jar:/Users/disconnect/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.3.5/spring-boot-test-autoconfigure-3.3.5.jar:/Users/disconnect/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/disconnect/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/disconnect/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/disconnect/.m2/repository/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar:/Users/disconnect/.m2/repository/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar:/Users/disconnect/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/Users/disconnect/.m2/repository/org/assertj/assertj-core/3.25.3/assertj-core-3.25.3.jar:/Users/disconnect/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/Users/disconnect/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/disconnect/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.5/junit-jupiter-5.10.5.jar:/Users/disconnect/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.5/junit-jupiter-api-5.10.5.jar:/Users/disconnect/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/disconnect/.m2/repository/org/junit/platform/junit-platform-commons/1.10.5/junit-platform-commons-1.10.5.jar:/Users/disconnect/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/disconnect/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.5/junit-jupiter-params-5.10.5.jar:/Users/disconnect/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.5/junit-jupiter-engine-5.10.5.jar:/Users/disconnect/.m2/repository/org/junit/platform/junit-platform-engine/1.10.5/junit-platform-engine-1.10.5.jar:/Users/disconnect/.m2/repository/org/mockito/mockito-core/5.11.0/mockito-core-5.11.0.jar:/Users/disconnect/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar:/Users/disconnect/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/disconnect/.m2/repository/org/mockito/mockito-junit-jupiter/5.11.0/mockito-junit-jupiter-5.11.0.jar:/Users/disconnect/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/Users/disconnect/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/disconnect/.m2/repository/org/springframework/spring-core/6.1.14/spring-core-6.1.14.jar:/Users/disconnect/.m2/repository/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.jar:/Users/disconnect/.m2/repository/org/springframework/spring-test/6.1.14/spring-test-6.1.14.jar:/Users/disconnect/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/disconnect/.m2/repository/org/springframework/boot/spring-boot-testcontainers/3.3.5/spring-boot-testcontainers-3.3.5.jar:/Users/disconnect/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.3.5/spring-boot-autoconfigure-3.3.5.jar:/Users/disconnect/.m2/repository/org/testcontainers/testcontainers/1.20.4/testcontainers-1.20.4.jar:/Users/disconnect/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/disconnect/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/disconnect/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/Users/disconnect/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/disconnect/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/disconnect/.m2/repository/com/github/docker-java/docker-java-api/3.4.0/docker-java-api-3.4.0.jar:/Users/disconnect/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.4.0/docker-java-transport-zerodep-3.4.0.jar:/Users/disconnect/.m2/repository/com/github/docker-java/docker-java-transport/3.4.0/docker-java-transport-3.4.0.jar:/Users/disconnect/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/disconnect/.m2/repository/org/testcontainers/junit-jupiter/1.20.4/junit-jupiter-1.20.4.jar:/Users/disconnect/.m2/repository/org/testcontainers/postgresql/1.20.4/postgresql-1.20.4.jar:/Users/disconnect/.m2/repository/org/testcontainers/jdbc/1.20.4/jdbc-1.20.4.jar:/Users/disconnect/.m2/repository/org/testcontainers/database-commons/1.20.4/database-commons-1.20.4.jar:"/>
@@ -34,7 +34,7 @@
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/disconnect/Documents/JavaClaudeProjects/order-platform/target/surefire/surefirebooter-20260927195351370_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/disconnect/Documents/JavaClaudeProjects/order-platform/target/surefire/surefirebooter-20260927214441029_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.8+12-LTS-250"/>
@@ -48,15 +48,16 @@
     <property name="localRepository" value="/Users/disconnect/.m2/repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/var/folders/d1/q1nfjh6d43v1qf59n74c0xd80000gn/T/"/>
-    <property name="catalina.home" value="/private/var/folders/d1/q1nfjh6d43v1qf59n74c0xd80000gn/T/tomcat.0.11664868443823530649"/>
+    <property name="catalina.home" value="/private/var/folders/d1/q1nfjh6d43v1qf59n74c0xd80000gn/T/tomcat.0.9972399476945880986"/>
     <property name="com.zaxxer.hikari.pool_number" value="1"/>
     <property name="java.version" value="21.0.8"/>
     <property name="user.dir" value="/Users/disconnect/Documents/JavaClaudeProjects/order-platform"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="39787"/>
+    <property name="PID" value="41874"/>
+    <property name="failIfNoTests" value="false"/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
-    <property name="catalina.base" value="/private/var/folders/d1/q1nfjh6d43v1qf59n74c0xd80000gn/T/tomcat.0.11664868443823530649"/>
+    <property name="catalina.base" value="/private/var/folders/d1/q1nfjh6d43v1qf59n74c0xd80000gn/T/tomcat.0.9972399476945880986"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/disconnect/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
@@ -68,32 +69,32 @@
     <property name="java.class.version" value="65.0"/>
     <property name="LOGGED_APPLICATION_NAME" value="[order-platform] "/>
   </properties>
-  <testcase name="concurrentRequestsWithoutIdempotencyKeyCreateMultipleOrders" classname="com.example.orderplatform.order.IdempotencyIntegrationTest" time="0.656">
-    <system-out><![CDATA[19:53:51.899 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.orderplatform.order.IdempotencyIntegrationTest]: IdempotencyIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-19:53:51.933 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
-19:53:51.935 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
-19:53:51.963 [main] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 1.20.4
-19:53:52.103 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
-19:53:52.301 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
-19:53:52.302 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
-19:53:52.321 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  <testcase name="concurrentFirstTimeRequestsWhereFirstFailsAndSecondSucceeds" classname="com.example.orderplatform.order.IdempotencyIntegrationTest" time="0.789">
+    <system-out><![CDATA[21:44:41.558 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.orderplatform.order.IdempotencyIntegrationTest]: IdempotencyIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:44:41.597 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+21:44:41.599 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+21:44:41.635 [main] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 1.20.4
+21:44:41.771 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+21:44:41.941 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+21:44:41.942 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+21:44:41.957 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
   Server Version: 29.8.0
   API Version: 1.56
   Operating System: Docker Desktop
   Total Memory: 7934 MB
   Labels: 
     com.docker.desktop.address=unix:///Users/disconnect/Library/Containers/com.docker.docker/Data/docker-cli.sock
-19:53:52.396 [main] INFO tc.testcontainers/ryuk:0.11.0 -- Creating container for image: testcontainers/ryuk:0.11.0
-19:53:52.629 [main] INFO tc.testcontainers/ryuk:0.11.0 -- Container testcontainers/ryuk:0.11.0 is starting: 7d70d2f902146c243c7fe296a4a5947d3cab023224ef1a70b0c481065292de43
-19:53:52.840 [main] INFO tc.testcontainers/ryuk:0.11.0 -- Container testcontainers/ryuk:0.11.0 started in PT0.443971S
-19:53:52.845 [main] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
-19:53:52.845 [main] INFO org.testcontainers.DockerClientFactory -- Checking the system...
-19:53:52.845 [main] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
-19:53:52.919 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.orderplatform.OrderPlatformApplication for test class com.example.orderplatform.order.IdempotencyIntegrationTest
-19:53:52.970 [main] INFO tc.postgres:16 -- Creating container for image: postgres:16
-19:53:53.016 [main] INFO tc.postgres:16 -- Container postgres:16 is starting: dce461d8281e84335ae640f972c120a683c3df28585c9b9c971d9c65a9b7305d
-19:53:54.050 [main] INFO tc.postgres:16 -- Container postgres:16 started in PT1.080766S
-19:53:54.051 [main] INFO tc.postgres:16 -- Container is started (JDBC URL: jdbc:postgresql://localhost:60265/test?loggerLevel=OFF)
+21:44:42.012 [main] INFO tc.testcontainers/ryuk:0.11.0 -- Creating container for image: testcontainers/ryuk:0.11.0
+21:44:42.217 [main] INFO tc.testcontainers/ryuk:0.11.0 -- Container testcontainers/ryuk:0.11.0 is starting: 76cf52baf48f679e10ecc4f2a092d6effe4a00b7c79f5eb2360fc7f5accebdab
+21:44:42.398 [main] INFO tc.testcontainers/ryuk:0.11.0 -- Container testcontainers/ryuk:0.11.0 started in PT0.386175S
+21:44:42.403 [main] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+21:44:42.403 [main] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+21:44:42.403 [main] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+21:44:42.476 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.orderplatform.OrderPlatformApplication for test class com.example.orderplatform.order.IdempotencyIntegrationTest
+21:44:42.528 [main] INFO tc.postgres:16 -- Creating container for image: postgres:16
+21:44:42.571 [main] INFO tc.postgres:16 -- Container postgres:16 is starting: f2a9fb22c4b6b937d7c3895168385570616d64ca7f6145219f0f816a7eae9dd5
+21:44:43.548 [main] INFO tc.postgres:16 -- Container postgres:16 started in PT1.020622S
+21:44:43.550 [main] INFO tc.postgres:16 -- Container is started (JDBC URL: jdbc:postgresql://localhost:61224/test?loggerLevel=OFF)
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -104,36 +105,36 @@
 
  :: Spring Boot ::                (v3.3.5)
 
-2026-09-27T19:53:54.250+05:30  INFO 39787 --- [order-platform] [           main] c.e.o.order.IdempotencyIntegrationTest   : Starting IdempotencyIntegrationTest using Java 21.0.8 with PID 39787 (started by disconnect in /Users/disconnect/Documents/JavaClaudeProjects/order-platform)
-2026-09-27T19:53:54.251+05:30  INFO 39787 --- [order-platform] [           main] c.e.o.order.IdempotencyIntegrationTest   : No active profile set, falling back to 1 default profile: "default"
-2026-09-27T19:53:54.567+05:30  INFO 39787 --- [order-platform] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-09-27T19:53:54.597+05:30  INFO 39787 --- [order-platform] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
-2026-09-27T19:53:54.949+05:30  INFO 39787 --- [order-platform] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2026-09-27T19:53:54.958+05:30  INFO 39787 --- [order-platform] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-27T19:53:54.958+05:30  INFO 39787 --- [order-platform] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2026-09-27T19:53:54.986+05:30  INFO 39787 --- [order-platform] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-27T19:53:54.986+05:30  INFO 39787 --- [order-platform] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 727 ms
-2026-09-27T19:53:55.269+05:30  INFO 39787 --- [order-platform] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:60265/test (PostgreSQL 16.15)
-2026-09-27T19:53:55.291+05:30  INFO 39787 --- [order-platform] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
-2026-09-27T19:53:55.293+05:30  INFO 39787 --- [order-platform] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.009s)
-2026-09-27T19:53:55.303+05:30  INFO 39787 --- [order-platform] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
-2026-09-27T19:53:55.340+05:30  INFO 39787 --- [order-platform] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
-2026-09-27T19:53:55.345+05:30  INFO 39787 --- [order-platform] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - init"
-2026-09-27T19:53:55.365+05:30  INFO 39787 --- [order-platform] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - idempotency key"
-2026-09-27T19:53:55.376+05:30  INFO 39787 --- [order-platform] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "public", now at version v2 (execution time 00:00.013s)
-2026-09-27T19:53:55.422+05:30  INFO 39787 --- [order-platform] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-09-27T19:53:55.456+05:30  INFO 39787 --- [order-platform] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2026-09-27T19:53:55.475+05:30  INFO 39787 --- [order-platform] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-09-27T19:53:55.627+05:30  INFO 39787 --- [order-platform] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-09-27T19:53:55.642+05:30  INFO 39787 --- [order-platform] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-27T19:53:55.661+05:30  INFO 39787 --- [order-platform] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@655f92a1
-2026-09-27T19:53:55.662+05:30  INFO 39787 --- [order-platform] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-27T19:53:56.220+05:30  INFO 39787 --- [order-platform] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-09-27T19:53:56.222+05:30  INFO 39787 --- [order-platform] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-09-27T19:53:56.355+05:30  INFO 39787 --- [order-platform] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-09-27T19:53:56.958+05:30  INFO 39787 --- [order-platform] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 60279 (http) with context path '/'
-2026-09-27T19:53:56.964+05:30  INFO 39787 --- [order-platform] [           main] c.e.o.order.IdempotencyIntegrationTest   : Started IdempotencyIntegrationTest in 2.88 seconds (process running for 5.541)
-2026-09-27T19:53:57.352+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
+2026-09-27T21:44:43.739+05:30  INFO 41874 --- [order-platform] [           main] c.e.o.order.IdempotencyIntegrationTest   : Starting IdempotencyIntegrationTest using Java 21.0.8 with PID 41874 (started by disconnect in /Users/disconnect/Documents/JavaClaudeProjects/order-platform)
+2026-09-27T21:44:43.740+05:30  INFO 41874 --- [order-platform] [           main] c.e.o.order.IdempotencyIntegrationTest   : No active profile set, falling back to 1 default profile: "default"
+2026-09-27T21:44:44.065+05:30  INFO 41874 --- [order-platform] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-27T21:44:44.100+05:30  INFO 41874 --- [order-platform] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
+2026-09-27T21:44:44.403+05:30  INFO 41874 --- [order-platform] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-09-27T21:44:44.412+05:30  INFO 41874 --- [order-platform] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-27T21:44:44.412+05:30  INFO 41874 --- [order-platform] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-09-27T21:44:44.440+05:30  INFO 41874 --- [order-platform] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-27T21:44:44.441+05:30  INFO 41874 --- [order-platform] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 692 ms
+2026-09-27T21:44:44.712+05:30  INFO 41874 --- [order-platform] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:61224/test (PostgreSQL 16.15)
+2026-09-27T21:44:44.733+05:30  INFO 41874 --- [order-platform] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2026-09-27T21:44:44.735+05:30  INFO 41874 --- [order-platform] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.010s)
+2026-09-27T21:44:44.748+05:30  INFO 41874 --- [order-platform] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2026-09-27T21:44:44.794+05:30  INFO 41874 --- [order-platform] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2026-09-27T21:44:44.800+05:30  INFO 41874 --- [order-platform] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - init"
+2026-09-27T21:44:44.818+05:30  INFO 41874 --- [order-platform] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - idempotency key"
+2026-09-27T21:44:44.828+05:30  INFO 41874 --- [order-platform] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "public", now at version v2 (execution time 00:00.013s)
+2026-09-27T21:44:44.876+05:30  INFO 41874 --- [order-platform] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-27T21:44:44.907+05:30  INFO 41874 --- [order-platform] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-09-27T21:44:44.925+05:30  INFO 41874 --- [order-platform] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-27T21:44:45.084+05:30  INFO 41874 --- [order-platform] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-27T21:44:45.100+05:30  INFO 41874 --- [order-platform] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-27T21:44:45.119+05:30  INFO 41874 --- [order-platform] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@22ed2886
+2026-09-27T21:44:45.120+05:30  INFO 41874 --- [order-platform] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-27T21:44:45.692+05:30  INFO 41874 --- [order-platform] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-27T21:44:45.694+05:30  INFO 41874 --- [order-platform] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-27T21:44:45.822+05:30  INFO 41874 --- [order-platform] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-27T21:44:46.399+05:30  INFO 41874 --- [order-platform] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 61238 (http) with context path '/'
+2026-09-27T21:44:46.405+05:30  INFO 41874 --- [order-platform] [           main] c.e.o.order.IdempotencyIntegrationTest   : Started IdempotencyIntegrationTest in 2.823 seconds (process running for 5.325)
+2026-09-27T21:44:46.871+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -143,7 +144,7 @@
         ik1_0.user_id 
     from
         idempotency_key ik1_0
-2026-09-27T19:53:57.369+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
+2026-09-27T21:44:46.888+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
     insert 
     into
         product
@@ -151,205 +152,10 @@
     values
         (?, ?, ?, ?) 
     returning id
-2026-09-27T19:53:57.457+05:30  INFO 39787 --- [order-platform] [o-auto-1-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-27T19:53:57.457+05:30  INFO 39787 --- [order-platform] [o-auto-1-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-27T19:53:57.458+05:30  INFO 39787 --- [order-platform] [o-auto-1-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-27T19:53:57.548+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
-    select
-        p1_0.id,
-        p1_0.available_quantity,
-        p1_0.name,
-        p1_0.price,
-        p1_0.sku 
-    from
-        product p1_0 
-    where
-        p1_0.id=? for no key update
-2026-09-27T19:53:57.548+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-3] org.hibernate.SQL                        : 
-    select
-        p1_0.id,
-        p1_0.available_quantity,
-        p1_0.name,
-        p1_0.price,
-        p1_0.sku 
-    from
-        product p1_0 
-    where
-        p1_0.id=? for no key update
-2026-09-27T19:53:57.548+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-1] org.hibernate.SQL                        : 
-    select
-        p1_0.id,
-        p1_0.available_quantity,
-        p1_0.name,
-        p1_0.price,
-        p1_0.sku 
-    from
-        product p1_0 
-    where
-        p1_0.id=? for no key update
-2026-09-27T19:53:57.555+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-3] org.hibernate.SQL                        : 
-    insert 
-    into
-        orders
-        (created_at, status, total_amount, user_id) 
-    values
-        (?, ?, ?, ?) 
-    returning id
-2026-09-27T19:53:57.558+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-3] org.hibernate.SQL                        : 
-    insert 
-    into
-        order_item
-        (order_id, product_id, quantity, unit_price) 
-    values
-        (?, ?, ?, ?) 
-    returning id
-2026-09-27T19:53:57.564+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-3] org.hibernate.SQL                        : 
-    update
-        product 
-    set
-        available_quantity=?,
-        name=?,
-        price=?,
-        sku=? 
-    where
-        id=?
-2026-09-27T19:53:57.568+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
-    insert 
-    into
-        orders
-        (created_at, status, total_amount, user_id) 
-    values
-        (?, ?, ?, ?) 
-    returning id
-2026-09-27T19:53:57.569+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
-    insert 
-    into
-        order_item
-        (order_id, product_id, quantity, unit_price) 
-    values
-        (?, ?, ?, ?) 
-    returning id
-2026-09-27T19:53:57.571+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
-    update
-        product 
-    set
-        available_quantity=?,
-        name=?,
-        price=?,
-        sku=? 
-    where
-        id=?
-2026-09-27T19:53:57.573+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-1] org.hibernate.SQL                        : 
-    insert 
-    into
-        orders
-        (created_at, status, total_amount, user_id) 
-    values
-        (?, ?, ?, ?) 
-    returning id
-2026-09-27T19:53:57.574+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-1] org.hibernate.SQL                        : 
-    insert 
-    into
-        order_item
-        (order_id, product_id, quantity, unit_price) 
-    values
-        (?, ?, ?, ?) 
-    returning id
-2026-09-27T19:53:57.576+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-1] org.hibernate.SQL                        : 
-    update
-        product 
-    set
-        available_quantity=?,
-        name=?,
-        price=?,
-        sku=? 
-    where
-        id=?
-]]></system-out>
-    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/disconnect/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar)
-WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
-WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
-WARNING: Dynamic loading of agents will be disallowed by default in a future release
-]]></system-err>
-  </testcase>
-  <testcase name="requestWithoutIdempotencyKeyCreatesOrderNormally" classname="com.example.orderplatform.order.IdempotencyIntegrationTest" time="0.02">
-    <system-out><![CDATA[2026-09-27T19:53:57.628+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
-    select
-        ik1_0.key,
-        ik1_0.created_at,
-        ik1_0.expires_at,
-        ik1_0.request_hash,
-        ik1_0.response_json,
-        ik1_0.user_id 
-    from
-        idempotency_key ik1_0
-2026-09-27T19:53:57.630+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
-    insert 
-    into
-        product
-        (available_quantity, name, price, sku) 
-    values
-        (?, ?, ?, ?) 
-    returning id
-2026-09-27T19:53:57.636+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-4] org.hibernate.SQL                        : 
-    select
-        p1_0.id,
-        p1_0.available_quantity,
-        p1_0.name,
-        p1_0.price,
-        p1_0.sku 
-    from
-        product p1_0 
-    where
-        p1_0.id=? for no key update
-2026-09-27T19:53:57.638+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-4] org.hibernate.SQL                        : 
-    insert 
-    into
-        orders
-        (created_at, status, total_amount, user_id) 
-    values
-        (?, ?, ?, ?) 
-    returning id
-2026-09-27T19:53:57.639+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-4] org.hibernate.SQL                        : 
-    insert 
-    into
-        order_item
-        (order_id, product_id, quantity, unit_price) 
-    values
-        (?, ?, ?, ?) 
-    returning id
-2026-09-27T19:53:57.641+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-4] org.hibernate.SQL                        : 
-    update
-        product 
-    set
-        available_quantity=?,
-        name=?,
-        price=?,
-        sku=? 
-    where
-        id=?
-]]></system-out>
-  </testcase>
-  <testcase name="duplicateRequestReturnsSameResponseWithoutCreatingNewOrder" classname="com.example.orderplatform.order.IdempotencyIntegrationTest" time="0.051">
-    <system-out><![CDATA[2026-09-27T19:53:57.648+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
-    select
-        ik1_0.key,
-        ik1_0.created_at,
-        ik1_0.expires_at,
-        ik1_0.request_hash,
-        ik1_0.response_json,
-        ik1_0.user_id 
-    from
-        idempotency_key ik1_0
-2026-09-27T19:53:57.650+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
-    insert 
-    into
-        product
-        (available_quantity, name, price, sku) 
-    values
-        (?, ?, ?, ?) 
-    returning id
-2026-09-27T19:53:57.669+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+2026-09-27T21:44:46.965+05:30  INFO 41874 --- [order-platform] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-27T21:44:46.966+05:30  INFO 41874 --- [order-platform] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-27T21:44:46.966+05:30  INFO 41874 --- [order-platform] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-09-27T21:44:47.072+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-1] org.hibernate.SQL                        : 
     INSERT 
     INTO
         idempotency_key
@@ -357,7 +163,15 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     VALUES
         (?, ?, ?, NULL) 
             ON CONFLICT (key) DO NOTHING 
-2026-09-27T19:53:57.672+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.072+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    INSERT 
+    INTO
+        idempotency_key
+        (key, user_id, request_hash, response_json) 
+    VALUES
+        (?, ?, ?, NULL) 
+            ON CONFLICT (key) DO NOTHING 
+2026-09-27T21:44:47.082+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-1] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -369,7 +183,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         idempotency_key ik1_0 
     where
         ik1_0.key=? for no key update
-2026-09-27T19:53:57.674+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.088+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-1] org.hibernate.SQL                        : 
     select
         p1_0.id,
         p1_0.available_quantity,
@@ -380,7 +194,30 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         product p1_0 
     where
         p1_0.id=? for no key update
-2026-09-27T19:53:57.675+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.091+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    select
+        ik1_0.key,
+        ik1_0.created_at,
+        ik1_0.expires_at,
+        ik1_0.request_hash,
+        ik1_0.response_json,
+        ik1_0.user_id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.key=? for no key update
+2026-09-27T21:44:47.095+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.available_quantity,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku 
+    from
+        product p1_0 
+    where
+        p1_0.id=? for no key update
+2026-09-27T21:44:47.101+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
     insert 
     into
         orders
@@ -388,7 +225,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     values
         (?, ?, ?, ?) 
     returning id
-2026-09-27T19:53:57.677+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.104+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
     insert 
     into
         order_item
@@ -396,7 +233,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     values
         (?, ?, ?, ?) 
     returning id
-2026-09-27T19:53:57.682+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.115+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
     update
         idempotency_key 
     set
@@ -407,7 +244,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         user_id=? 
     where
         key=?
-2026-09-27T19:53:57.683+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.117+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
     update
         product 
     set
@@ -417,7 +254,248 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         sku=? 
     where
         id=?
-2026-09-27T19:53:57.689+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.183+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
+    select
+        count(*) 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.key=?
+2026-09-27T21:44:47.189+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
+    select
+        ik1_0.key,
+        ik1_0.created_at,
+        ik1_0.expires_at,
+        ik1_0.request_hash,
+        ik1_0.response_json,
+        ik1_0.user_id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.key=?
+]]></system-out>
+    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/disconnect/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+  <testcase name="concurrentRequestsWithoutIdempotencyKeyCreateMultipleOrders" classname="com.example.orderplatform.order.IdempotencyIntegrationTest" time="0.039">
+    <system-out><![CDATA[2026-09-27T21:44:47.202+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
+    select
+        ik1_0.key,
+        ik1_0.created_at,
+        ik1_0.expires_at,
+        ik1_0.request_hash,
+        ik1_0.response_json,
+        ik1_0.user_id 
+    from
+        idempotency_key ik1_0
+2026-09-27T21:44:47.206+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        key=?
+2026-09-27T21:44:47.209+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        product
+        (available_quantity, name, price, sku) 
+    values
+        (?, ?, ?, ?) 
+    returning id
+2026-09-27T21:44:47.214+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.available_quantity,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku 
+    from
+        product p1_0 
+    where
+        p1_0.id=? for no key update
+2026-09-27T21:44:47.215+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.available_quantity,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku 
+    from
+        product p1_0 
+    where
+        p1_0.id=? for no key update
+2026-09-27T21:44:47.216+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-3] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.available_quantity,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku 
+    from
+        product p1_0 
+    where
+        p1_0.id=? for no key update
+2026-09-27T21:44:47.216+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        orders
+        (created_at, status, total_amount, user_id) 
+    values
+        (?, ?, ?, ?) 
+    returning id
+2026-09-27T21:44:47.217+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        order_item
+        (order_id, product_id, quantity, unit_price) 
+    values
+        (?, ?, ?, ?) 
+    returning id
+2026-09-27T21:44:47.219+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    update
+        product 
+    set
+        available_quantity=?,
+        name=?,
+        price=?,
+        sku=? 
+    where
+        id=?
+2026-09-27T21:44:47.221+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+    insert 
+    into
+        orders
+        (created_at, status, total_amount, user_id) 
+    values
+        (?, ?, ?, ?) 
+    returning id
+2026-09-27T21:44:47.222+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+    insert 
+    into
+        order_item
+        (order_id, product_id, quantity, unit_price) 
+    values
+        (?, ?, ?, ?) 
+    returning id
+2026-09-27T21:44:47.223+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+    update
+        product 
+    set
+        available_quantity=?,
+        name=?,
+        price=?,
+        sku=? 
+    where
+        id=?
+2026-09-27T21:44:47.225+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-3] org.hibernate.SQL                        : 
+    insert 
+    into
+        orders
+        (created_at, status, total_amount, user_id) 
+    values
+        (?, ?, ?, ?) 
+    returning id
+2026-09-27T21:44:47.226+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-3] org.hibernate.SQL                        : 
+    insert 
+    into
+        order_item
+        (order_id, product_id, quantity, unit_price) 
+    values
+        (?, ?, ?, ?) 
+    returning id
+2026-09-27T21:44:47.229+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-3] org.hibernate.SQL                        : 
+    update
+        product 
+    set
+        available_quantity=?,
+        name=?,
+        price=?,
+        sku=? 
+    where
+        id=?
+]]></system-out>
+  </testcase>
+  <testcase name="requestWithoutIdempotencyKeyCreatesOrderNormally" classname="com.example.orderplatform.order.IdempotencyIntegrationTest" time="0.017">
+    <system-out><![CDATA[2026-09-27T21:44:47.241+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
+    select
+        ik1_0.key,
+        ik1_0.created_at,
+        ik1_0.expires_at,
+        ik1_0.request_hash,
+        ik1_0.response_json,
+        ik1_0.user_id 
+    from
+        idempotency_key ik1_0
+2026-09-27T21:44:47.244+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        product
+        (available_quantity, name, price, sku) 
+    values
+        (?, ?, ?, ?) 
+    returning id
+2026-09-27T21:44:47.249+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.available_quantity,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku 
+    from
+        product p1_0 
+    where
+        p1_0.id=? for no key update
+2026-09-27T21:44:47.250+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+    insert 
+    into
+        orders
+        (created_at, status, total_amount, user_id) 
+    values
+        (?, ?, ?, ?) 
+    returning id
+2026-09-27T21:44:47.252+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+    insert 
+    into
+        order_item
+        (order_id, product_id, quantity, unit_price) 
+    values
+        (?, ?, ?, ?) 
+    returning id
+2026-09-27T21:44:47.253+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+    update
+        product 
+    set
+        available_quantity=?,
+        name=?,
+        price=?,
+        sku=? 
+    where
+        id=?
+]]></system-out>
+  </testcase>
+  <testcase name="duplicateRequestReturnsSameResponseWithoutCreatingNewOrder" classname="com.example.orderplatform.order.IdempotencyIntegrationTest" time="0.031">
+    <system-out><![CDATA[2026-09-27T21:44:47.259+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
+    select
+        ik1_0.key,
+        ik1_0.created_at,
+        ik1_0.expires_at,
+        ik1_0.request_hash,
+        ik1_0.response_json,
+        ik1_0.user_id 
+    from
+        idempotency_key ik1_0
+2026-09-27T21:44:47.261+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        product
+        (available_quantity, name, price, sku) 
+    values
+        (?, ?, ?, ?) 
+    returning id
+2026-09-27T21:44:47.266+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
     INSERT 
     INTO
         idempotency_key
@@ -425,7 +503,75 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     VALUES
         (?, ?, ?, NULL) 
             ON CONFLICT (key) DO NOTHING 
-2026-09-27T19:53:57.690+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.267+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    select
+        ik1_0.key,
+        ik1_0.created_at,
+        ik1_0.expires_at,
+        ik1_0.request_hash,
+        ik1_0.response_json,
+        ik1_0.user_id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.key=? for no key update
+2026-09-27T21:44:47.269+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.available_quantity,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku 
+    from
+        product p1_0 
+    where
+        p1_0.id=? for no key update
+2026-09-27T21:44:47.270+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    insert 
+    into
+        orders
+        (created_at, status, total_amount, user_id) 
+    values
+        (?, ?, ?, ?) 
+    returning id
+2026-09-27T21:44:47.271+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    insert 
+    into
+        order_item
+        (order_id, product_id, quantity, unit_price) 
+    values
+        (?, ?, ?, ?) 
+    returning id
+2026-09-27T21:44:47.273+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    update
+        idempotency_key 
+    set
+        created_at=?,
+        expires_at=?,
+        request_hash=?,
+        response_json=?,
+        user_id=? 
+    where
+        key=?
+2026-09-27T21:44:47.274+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    update
+        product 
+    set
+        available_quantity=?,
+        name=?,
+        price=?,
+        sku=? 
+    where
+        id=?
+2026-09-27T21:44:47.280+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+    INSERT 
+    INTO
+        idempotency_key
+        (key, user_id, request_hash, response_json) 
+    VALUES
+        (?, ?, ?, NULL) 
+            ON CONFLICT (key) DO NOTHING 
+2026-09-27T21:44:47.281+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-8] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -440,7 +586,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
 ]]></system-out>
   </testcase>
   <testcase name="firstRequestWithIdempotencyKeyCreatesOrder" classname="com.example.orderplatform.order.IdempotencyIntegrationTest" time="0.021">
-    <system-out><![CDATA[2026-09-27T19:53:57.699+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
+    <system-out><![CDATA[2026-09-27T21:44:47.290+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -450,13 +596,13 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         ik1_0.user_id 
     from
         idempotency_key ik1_0
-2026-09-27T19:53:57.702+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.292+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
     delete 
     from
         idempotency_key 
     where
         key=?
-2026-09-27T19:53:57.704+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.293+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
     insert 
     into
         product
@@ -464,7 +610,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     values
         (?, ?, ?, ?) 
     returning id
-2026-09-27T19:53:57.708+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.299+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-9] org.hibernate.SQL                        : 
     INSERT 
     INTO
         idempotency_key
@@ -472,7 +618,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     VALUES
         (?, ?, ?, NULL) 
             ON CONFLICT (key) DO NOTHING 
-2026-09-27T19:53:57.710+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.300+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-9] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -484,7 +630,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         idempotency_key ik1_0 
     where
         ik1_0.key=? for no key update
-2026-09-27T19:53:57.711+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.301+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-9] org.hibernate.SQL                        : 
     select
         p1_0.id,
         p1_0.available_quantity,
@@ -495,7 +641,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         product p1_0 
     where
         p1_0.id=? for no key update
-2026-09-27T19:53:57.712+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.303+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-9] org.hibernate.SQL                        : 
     insert 
     into
         orders
@@ -503,7 +649,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     values
         (?, ?, ?, ?) 
     returning id
-2026-09-27T19:53:57.713+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.303+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-9] org.hibernate.SQL                        : 
     insert 
     into
         order_item
@@ -511,7 +657,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     values
         (?, ?, ?, ?) 
     returning id
-2026-09-27T19:53:57.715+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.305+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-9] org.hibernate.SQL                        : 
     update
         idempotency_key 
     set
@@ -522,7 +668,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         user_id=? 
     where
         key=?
-2026-09-27T19:53:57.715+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.306+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-9] org.hibernate.SQL                        : 
     update
         product 
     set
@@ -535,7 +681,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
 ]]></system-out>
   </testcase>
   <testcase name="differentPayloadWithSameKeyThrowsException" classname="com.example.orderplatform.order.IdempotencyIntegrationTest" time="0.029">
-    <system-out><![CDATA[2026-09-27T19:53:57.721+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
+    <system-out><![CDATA[2026-09-27T21:44:47.312+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -545,13 +691,13 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         ik1_0.user_id 
     from
         idempotency_key ik1_0
-2026-09-27T19:53:57.722+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.313+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
     delete 
     from
         idempotency_key 
     where
         key=?
-2026-09-27T19:53:57.723+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.315+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
     insert 
     into
         product
@@ -559,7 +705,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     values
         (?, ?, ?, ?) 
     returning id
-2026-09-27T19:53:57.728+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.320+05:30 DEBUG 41874 --- [order-platform] [-auto-1-exec-10] org.hibernate.SQL                        : 
     INSERT 
     INTO
         idempotency_key
@@ -567,7 +713,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     VALUES
         (?, ?, ?, NULL) 
             ON CONFLICT (key) DO NOTHING 
-2026-09-27T19:53:57.729+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.322+05:30 DEBUG 41874 --- [order-platform] [-auto-1-exec-10] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -579,7 +725,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         idempotency_key ik1_0 
     where
         ik1_0.key=? for no key update
-2026-09-27T19:53:57.730+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.323+05:30 DEBUG 41874 --- [order-platform] [-auto-1-exec-10] org.hibernate.SQL                        : 
     select
         p1_0.id,
         p1_0.available_quantity,
@@ -590,7 +736,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         product p1_0 
     where
         p1_0.id=? for no key update
-2026-09-27T19:53:57.731+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.324+05:30 DEBUG 41874 --- [order-platform] [-auto-1-exec-10] org.hibernate.SQL                        : 
     insert 
     into
         orders
@@ -598,7 +744,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     values
         (?, ?, ?, ?) 
     returning id
-2026-09-27T19:53:57.732+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.326+05:30 DEBUG 41874 --- [order-platform] [-auto-1-exec-10] org.hibernate.SQL                        : 
     insert 
     into
         order_item
@@ -606,7 +752,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     values
         (?, ?, ?, ?) 
     returning id
-2026-09-27T19:53:57.734+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.328+05:30 DEBUG 41874 --- [order-platform] [-auto-1-exec-10] org.hibernate.SQL                        : 
     update
         idempotency_key 
     set
@@ -617,7 +763,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         user_id=? 
     where
         key=?
-2026-09-27T19:53:57.735+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.329+05:30 DEBUG 41874 --- [order-platform] [-auto-1-exec-10] org.hibernate.SQL                        : 
     update
         product 
     set
@@ -627,7 +773,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         sku=? 
     where
         id=?
-2026-09-27T19:53:57.740+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-9] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.334+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-1] org.hibernate.SQL                        : 
     INSERT 
     INTO
         idempotency_key
@@ -635,7 +781,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     VALUES
         (?, ?, ?, NULL) 
             ON CONFLICT (key) DO NOTHING 
-2026-09-27T19:53:57.742+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-9] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.335+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-1] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -649,8 +795,8 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         ik1_0.key=? for no key update
 ]]></system-out>
   </testcase>
-  <testcase name="concurrentFirstTimeRequestsWithSameNewIdempotencyKeyCreatesExactlyOneOrder" classname="com.example.orderplatform.order.IdempotencyIntegrationTest" time="0.022">
-    <system-out><![CDATA[2026-09-27T19:53:57.750+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
+  <testcase name="concurrentFirstTimeRequestsWithSameNewIdempotencyKeyCreatesExactlyOneOrder" classname="com.example.orderplatform.order.IdempotencyIntegrationTest" time="0.025">
+    <system-out><![CDATA[2026-09-27T21:44:47.341+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -660,13 +806,13 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         ik1_0.user_id 
     from
         idempotency_key ik1_0
-2026-09-27T19:53:57.752+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.342+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
     delete 
     from
         idempotency_key 
     where
         key=?
-2026-09-27T19:53:57.753+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.344+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
     insert 
     into
         product
@@ -674,7 +820,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     values
         (?, ?, ?, ?) 
     returning id
-2026-09-27T19:53:57.757+05:30 DEBUG 39787 --- [order-platform] [-auto-1-exec-10] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.349+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
     INSERT 
     INTO
         idempotency_key
@@ -682,7 +828,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     VALUES
         (?, ?, ?, NULL) 
             ON CONFLICT (key) DO NOTHING 
-2026-09-27T19:53:57.758+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-3] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.349+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-4] org.hibernate.SQL                        : 
     INSERT 
     INTO
         idempotency_key
@@ -690,7 +836,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     VALUES
         (?, ?, ?, NULL) 
             ON CONFLICT (key) DO NOTHING 
-2026-09-27T19:53:57.758+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.349+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-5] org.hibernate.SQL                        : 
     INSERT 
     INTO
         idempotency_key
@@ -698,7 +844,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     VALUES
         (?, ?, ?, NULL) 
             ON CONFLICT (key) DO NOTHING 
-2026-09-27T19:53:57.759+05:30 DEBUG 39787 --- [order-platform] [-auto-1-exec-10] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.350+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -710,7 +856,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         idempotency_key ik1_0 
     where
         ik1_0.key=? for no key update
-2026-09-27T19:53:57.760+05:30 DEBUG 39787 --- [order-platform] [-auto-1-exec-10] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.352+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
     select
         p1_0.id,
         p1_0.available_quantity,
@@ -721,7 +867,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         product p1_0 
     where
         p1_0.id=? for no key update
-2026-09-27T19:53:57.761+05:30 DEBUG 39787 --- [order-platform] [-auto-1-exec-10] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.353+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
     insert 
     into
         orders
@@ -729,7 +875,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     values
         (?, ?, ?, ?) 
     returning id
-2026-09-27T19:53:57.762+05:30 DEBUG 39787 --- [order-platform] [-auto-1-exec-10] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.354+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
     insert 
     into
         order_item
@@ -737,7 +883,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     values
         (?, ?, ?, ?) 
     returning id
-2026-09-27T19:53:57.763+05:30 DEBUG 39787 --- [order-platform] [-auto-1-exec-10] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.356+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
     update
         idempotency_key 
     set
@@ -748,7 +894,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         user_id=? 
     where
         key=?
-2026-09-27T19:53:57.764+05:30 DEBUG 39787 --- [order-platform] [-auto-1-exec-10] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.357+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
     update
         product 
     set
@@ -758,7 +904,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         sku=? 
     where
         id=?
-2026-09-27T19:53:57.766+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-3] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.359+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-4] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -770,7 +916,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         idempotency_key ik1_0 
     where
         ik1_0.key=? for no key update
-2026-09-27T19:53:57.766+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-2] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.359+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-5] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -784,8 +930,8 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         ik1_0.key=? for no key update
 ]]></system-out>
   </testcase>
-  <testcase name="differentUserWithSameKeyThrowsException" classname="com.example.orderplatform.order.IdempotencyIntegrationTest" time="0.027">
-    <system-out><![CDATA[2026-09-27T19:53:57.773+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
+  <testcase name="differentUserWithSameKeyThrowsException" classname="com.example.orderplatform.order.IdempotencyIntegrationTest" time="0.028">
+    <system-out><![CDATA[2026-09-27T21:44:47.366+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -795,13 +941,13 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         ik1_0.user_id 
     from
         idempotency_key ik1_0
-2026-09-27T19:53:57.774+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.367+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
     delete 
     from
         idempotency_key 
     where
         key=?
-2026-09-27T19:53:57.776+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.369+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
     insert 
     into
         product
@@ -809,7 +955,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     values
         (?, ?, ?, ?) 
     returning id
-2026-09-27T19:53:57.780+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-1] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.374+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-3] org.hibernate.SQL                        : 
     INSERT 
     INTO
         idempotency_key
@@ -817,7 +963,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     VALUES
         (?, ?, ?, NULL) 
             ON CONFLICT (key) DO NOTHING 
-2026-09-27T19:53:57.781+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-1] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.375+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-3] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -829,7 +975,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         idempotency_key ik1_0 
     where
         ik1_0.key=? for no key update
-2026-09-27T19:53:57.783+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-1] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.377+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-3] org.hibernate.SQL                        : 
     select
         p1_0.id,
         p1_0.available_quantity,
@@ -840,7 +986,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         product p1_0 
     where
         p1_0.id=? for no key update
-2026-09-27T19:53:57.784+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-1] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.378+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-3] org.hibernate.SQL                        : 
     insert 
     into
         orders
@@ -848,7 +994,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     values
         (?, ?, ?, ?) 
     returning id
-2026-09-27T19:53:57.785+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-1] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.380+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-3] org.hibernate.SQL                        : 
     insert 
     into
         order_item
@@ -856,7 +1002,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     values
         (?, ?, ?, ?) 
     returning id
-2026-09-27T19:53:57.787+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-1] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.381+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-3] org.hibernate.SQL                        : 
     update
         idempotency_key 
     set
@@ -867,7 +1013,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         user_id=? 
     where
         key=?
-2026-09-27T19:53:57.788+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-1] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.382+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-3] org.hibernate.SQL                        : 
     update
         product 
     set
@@ -877,7 +1023,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         sku=? 
     where
         id=?
-2026-09-27T19:53:57.793+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.388+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-6] org.hibernate.SQL                        : 
     INSERT 
     INTO
         idempotency_key
@@ -885,7 +1031,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     VALUES
         (?, ?, ?, NULL) 
             ON CONFLICT (key) DO NOTHING 
-2026-09-27T19:53:57.794+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.389+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-6] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -899,8 +1045,8 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         ik1_0.key=? for no key update
 ]]></system-out>
   </testcase>
-  <testcase name="concurrentDuplicateRequestsWithSameKeyOnlyCreatesOneOrder" classname="com.example.orderplatform.order.IdempotencyIntegrationTest" time="0.024">
-    <system-out><![CDATA[2026-09-27T19:53:57.800+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
+  <testcase name="concurrentDuplicateRequestsWithSameKeyOnlyCreatesOneOrder" classname="com.example.orderplatform.order.IdempotencyIntegrationTest" time="0.023">
+    <system-out><![CDATA[2026-09-27T21:44:47.394+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -910,13 +1056,13 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         ik1_0.user_id 
     from
         idempotency_key ik1_0
-2026-09-27T19:53:57.802+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.395+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
     delete 
     from
         idempotency_key 
     where
         key=?
-2026-09-27T19:53:57.803+05:30 DEBUG 39787 --- [order-platform] [           main] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.397+05:30 DEBUG 41874 --- [order-platform] [           main] org.hibernate.SQL                        : 
     insert 
     into
         product
@@ -924,7 +1070,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     values
         (?, ?, ?, ?) 
     returning id
-2026-09-27T19:53:57.808+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.402+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
     INSERT 
     INTO
         idempotency_key
@@ -932,7 +1078,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     VALUES
         (?, ?, ?, NULL) 
             ON CONFLICT (key) DO NOTHING 
-2026-09-27T19:53:57.808+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.402+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-9] org.hibernate.SQL                        : 
     INSERT 
     INTO
         idempotency_key
@@ -940,7 +1086,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     VALUES
         (?, ?, ?, NULL) 
             ON CONFLICT (key) DO NOTHING 
-2026-09-27T19:53:57.808+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.402+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-8] org.hibernate.SQL                        : 
     INSERT 
     INTO
         idempotency_key
@@ -948,7 +1094,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     VALUES
         (?, ?, ?, NULL) 
             ON CONFLICT (key) DO NOTHING 
-2026-09-27T19:53:57.809+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.403+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-1] org.hibernate.SQL                        : 
     INSERT 
     INTO
         idempotency_key
@@ -956,15 +1102,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     VALUES
         (?, ?, ?, NULL) 
             ON CONFLICT (key) DO NOTHING 
-2026-09-27T19:53:57.809+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-9] org.hibernate.SQL                        : 
-    INSERT 
-    INTO
-        idempotency_key
-        (key, user_id, request_hash, response_json) 
-    VALUES
-        (?, ?, ?, NULL) 
-            ON CONFLICT (key) DO NOTHING 
-2026-09-27T19:53:57.809+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.403+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -976,7 +1114,15 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         idempotency_key ik1_0 
     where
         ik1_0.key=? for no key update
-2026-09-27T19:53:57.810+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.403+05:30 DEBUG 41874 --- [order-platform] [-auto-1-exec-10] org.hibernate.SQL                        : 
+    INSERT 
+    INTO
+        idempotency_key
+        (key, user_id, request_hash, response_json) 
+    VALUES
+        (?, ?, ?, NULL) 
+            ON CONFLICT (key) DO NOTHING 
+2026-09-27T21:44:47.404+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
     select
         p1_0.id,
         p1_0.available_quantity,
@@ -987,7 +1133,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         product p1_0 
     where
         p1_0.id=? for no key update
-2026-09-27T19:53:57.811+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.405+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
     insert 
     into
         orders
@@ -995,7 +1141,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     values
         (?, ?, ?, ?) 
     returning id
-2026-09-27T19:53:57.812+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.406+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
     insert 
     into
         order_item
@@ -1003,7 +1149,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
     values
         (?, ?, ?, ?) 
     returning id
-2026-09-27T19:53:57.814+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.408+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
     update
         idempotency_key 
     set
@@ -1014,7 +1160,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         user_id=? 
     where
         key=?
-2026-09-27T19:53:57.815+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.409+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
     update
         product 
     set
@@ -1024,7 +1170,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         sku=? 
     where
         id=?
-2026-09-27T19:53:57.816+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.411+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-9] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -1036,7 +1182,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         idempotency_key ik1_0 
     where
         ik1_0.key=? for no key update
-2026-09-27T19:53:57.817+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.411+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-8] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -1048,7 +1194,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         idempotency_key ik1_0 
     where
         ik1_0.key=? for no key update
-2026-09-27T19:53:57.817+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-9] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.411+05:30 DEBUG 41874 --- [order-platform] [-auto-1-exec-10] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
@@ -1060,7 +1206,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         idempotency_key ik1_0 
     where
         ik1_0.key=? for no key update
-2026-09-27T19:53:57.817+05:30 DEBUG 39787 --- [order-platform] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+2026-09-27T21:44:47.411+05:30 DEBUG 41874 --- [order-platform] [o-auto-1-exec-1] org.hibernate.SQL                        : 
     select
         ik1_0.key,
         ik1_0.created_at,
