@@ -8,6 +8,7 @@ import java.util.List;
 
 public record CreateOrderRequest(
         @NotNull Long userId,
-        @NotEmpty @Valid List<OrderItemRequest> items
+        @NotEmpty @Valid List<OrderItemRequest> items,
+        String idempotencyKey
 ) {
 }

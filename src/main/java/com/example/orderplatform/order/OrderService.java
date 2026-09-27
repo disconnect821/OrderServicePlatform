@@ -10,17 +10,25 @@ import com.example.orderplatform.product.ProductRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.example.orderplatform.idempotency.IdempotencyKey;
+import com.example.orderplatform.idempotency.IdempotencyKeyRepository;
+
 import java.math.BigDecimal;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.util.HexFormat;
 
 @Service
 public class OrderService {
 
     private final OrderRepository orderRepository;
     private final ProductRepository productRepository;
+    private final IdempotencyKeyRepository idempotencyKeyRepository;
 
-    public OrderService(OrderRepository orderRepository, ProductRepository productRepository) {
+    public OrderService(OrderRepository orderRepository, ProductRepository productRepository, IdempotencyKeyRepository idempotencyKeyRepository) {
         this.orderRepository = orderRepository;
         this.productRepository = productRepository;
+        this.idempotencyKeyRepository = idempotencyKeyRepository;
     }
 
     // Everything below runs in one transaction: if any item fails
@@ -30,6 +38,45 @@ public class OrderService {
     // stock and no order to show for it.
     @Transactional
     public OrderResponse createOrder(CreateOrderRequest request) {
+        String idempotencyKeyValue = request.idempotencyKey();
+
+        String requestHash = null;
+
+        IdempotencyKey keyRecord = null;
+
+        if (idempotencyKeyValue != null && !idempotencyKeyValue.isBlank()) {
+
+            requestHash = computeRequestHash(request);
+
+            //Create the key atomically if its doesn't really exist
+            //it makes the repository operation clearer and is useful when debugging concurrent behavior
+            int inserted = idempotencyKeyRepository.insertIfAbsent(idempotencyKeyValue, request.userId(), requestHash);
+
+            // Lock idempotency row first (before product locks) to serialize duplicates
+            keyRecord = idempotencyKeyRepository
+                    .findByKeyWithLock(idempotencyKeyValue)
+                    .orElseThrow(() -> new IllegalStateException("Idempotency key missing after re-insert"));
+
+            if (keyRecord != null) {
+                if (!keyRecord.getUserId().equals(request.userId())) {
+                    throw new IllegalArgumentException("Idempotency key belongs to a different user");
+                }
+                if (!keyRecord.getRequestHash().equals(requestHash)) {
+                    throw new IllegalArgumentException("Request payload does not match original idempotency key request");
+                }
+                if (keyRecord.getResponseJson() != null) {
+                    // Return stored response from previous successful request
+                    return OrderResponse.fromJson(keyRecord.getResponseJson());
+                }
+            }
+            // At this point:
+            // inserted == 1 → this request created the key
+            // inserted == 0 → another request created it
+            //
+            // In either case, responseJson == null means
+            // the order still needs to be processed.
+        }
+
         Order order = new Order(request.userId());
         BigDecimal total = BigDecimal.ZERO;
 
@@ -56,7 +103,26 @@ public class OrderService {
 
         order.setTotalAmount(total);
         Order saved = orderRepository.save(order);
-        return OrderResponse.from(saved);
+        OrderResponse response = OrderResponse.from(saved);
+
+        if (idempotencyKeyValue != null && !idempotencyKeyValue.isBlank() && keyRecord != null) {
+            //Since keyRecord was loaded inside the same @Transactional method, it is a managed JPA entity.
+            keyRecord.setResponseJson(response.toJson());
+        }
+
+        return response;
+    }
+
+
+    private String computeRequestHash(CreateOrderRequest request) {
+        try {
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            String data = request.userId() + "|" + request.items().toString();
+            byte[] hash = digest.digest(data.getBytes(StandardCharsets.UTF_8));
+            return HexFormat.of().formatHex(hash);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to compute request hash", e);
+        }
     }
 
     @Transactional(readOnly = true)

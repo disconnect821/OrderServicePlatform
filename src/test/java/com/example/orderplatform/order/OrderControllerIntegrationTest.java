@@ -51,7 +51,7 @@ class OrderControllerIntegrationTest {
 
         CreateOrderRequest request = new CreateOrderRequest(
                 101L,
-                List.of(new OrderItemRequest(product.getId(), 2)));
+                List.of(new OrderItemRequest(product.getId(), 2)), null);
 
         ResponseEntity<OrderResponse> response =
                 restTemplate.postForEntity("/orders", request, OrderResponse.class);
@@ -72,7 +72,7 @@ class OrderControllerIntegrationTest {
 
         CreateOrderRequest request = new CreateOrderRequest(
                 101L,
-                List.of(new OrderItemRequest(product.getId(), 5)));
+                List.of(new OrderItemRequest(product.getId(), 5)), null);
 
         ResponseEntity<String> response =
                 restTemplate.postForEntity("/orders", request, String.class);
@@ -102,7 +102,7 @@ class OrderControllerIntegrationTest {
         // Create request for each concurrent order
         CreateOrderRequest request = new CreateOrderRequest(
                 201L,
-                List.of(new OrderItemRequest(product.getId(), orderQuantity)));
+                List.of(new OrderItemRequest(product.getId(), orderQuantity)), null);
 
         // Submit all concurrent requests
         for (int i = 0; i < totalRequests; i++) {
