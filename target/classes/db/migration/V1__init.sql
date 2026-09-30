@@ -1,4 +1,4 @@
-CREATE TABLE product (
+CREATE TABLE IF NOT EXISTS product (
     id                  BIGSERIAL PRIMARY KEY,
     sku                 VARCHAR(64)     NOT NULL UNIQUE,
     name                VARCHAR(255)    NOT NULL,
@@ -6,7 +6,7 @@ CREATE TABLE product (
     available_quantity  INT             NOT NULL CHECK (available_quantity >= 0)
 );
 
-CREATE TABLE orders (
+CREATE TABLE IF NOT EXISTS orders (
     id           BIGSERIAL PRIMARY KEY,
     user_id      BIGINT          NOT NULL,
     status       VARCHAR(32)     NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE orders (
     created_at   TIMESTAMP       NOT NULL DEFAULT now()
 );
 
-CREATE TABLE order_item (
+CREATE TABLE IF NOT EXISTS order_item (
     id          BIGSERIAL PRIMARY KEY,
     order_id    BIGINT          NOT NULL REFERENCES orders(id) ON DELETE CASCADE,
     product_id  BIGINT          NOT NULL REFERENCES product(id),
@@ -22,4 +22,4 @@ CREATE TABLE order_item (
     unit_price  NUMERIC(12, 2)  NOT NULL
 );
 
-CREATE INDEX idx_order_item_order_id ON order_item(order_id);
+CREATE INDEX IF NOT EXISTS idx_order_item_order_id ON order_item(order_id);

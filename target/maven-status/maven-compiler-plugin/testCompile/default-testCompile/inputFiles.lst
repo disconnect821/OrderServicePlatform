@@ -1,2 +1,3 @@
 /Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/test/java/com/example/orderplatform/order/IdempotencyIntegrationTest.java
 /Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/test/java/com/example/orderplatform/order/OrderControllerIntegrationTest.java
+/Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/test/java/com/example/orderplatform/payment/PaymentControllerIntegrationTest.java

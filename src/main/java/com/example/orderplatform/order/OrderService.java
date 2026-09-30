@@ -2,6 +2,7 @@ package com.example.orderplatform.order;
 
 import com.example.orderplatform.common.InsufficientStockException;
 import com.example.orderplatform.common.ResourceNotFoundException;
+import com.example.orderplatform.idempotency.IdempotencyOperationType;
 import com.example.orderplatform.order.dto.CreateOrderRequest;
 import com.example.orderplatform.order.dto.OrderItemRequest;
 import com.example.orderplatform.order.dto.OrderResponse;
@@ -50,11 +51,11 @@ public class OrderService {
 
             //Create the key atomically if its doesn't really exist
             //it makes the repository operation clearer and is useful when debugging concurrent behavior
-            int inserted = idempotencyKeyRepository.insertIfAbsent(idempotencyKeyValue, request.userId(), requestHash);
+            int inserted = idempotencyKeyRepository.insertIfAbsent(idempotencyKeyValue, IdempotencyOperationType.CREATE_ORDER.name(), request.userId(), requestHash);
 
             // Lock idempotency row first (before product locks) to serialize duplicates
             keyRecord = idempotencyKeyRepository
-                    .findByKeyWithLock(idempotencyKeyValue)
+                    .findByOperationAndKeyWithLock(IdempotencyOperationType.CREATE_ORDER, idempotencyKeyValue)
                     .orElseThrow(() -> new IllegalStateException("Idempotency key missing after re-insert"));
 
             if (keyRecord != null) {

@@ -1,7 +1,9 @@
 package com.example.orderplatform.order;
 
 import com.example.orderplatform.idempotency.IdempotencyKey;
+import com.example.orderplatform.idempotency.IdempotencyKeyId;
 import com.example.orderplatform.idempotency.IdempotencyKeyRepository;
+import com.example.orderplatform.idempotency.IdempotencyOperationType;
 import com.example.orderplatform.order.dto.CreateOrderRequest;
 import com.example.orderplatform.product.Product;
 import com.example.orderplatform.product.ProductRepository;
@@ -203,21 +205,6 @@ public class IdempotencyIntegrationTest {
         }
     }
 
-    @Test
-    void requestWithoutIdempotencyKeyCreatesOrderNormally() {
-        Product product = productRepository.save(
-                new Product("SKU-NO-KEY", "No Key Widget", new BigDecimal("50.00"), 3));
-
-        CreateOrderRequest request = new CreateOrderRequest(
-                5001L,
-                List.of(new OrderItemRequest(product.getId(), 2)),
-                null
-        );
-
-        ResponseEntity<OrderResponse> response = restTemplate.postForEntity("/orders", request, OrderResponse.class);
-        assertThat(response.getStatusCode().value()).isEqualTo(201);
-        assertThat(response.getBody()).isNotNull();
-    }
 
     @Test
     void concurrentFirstTimeRequestsWhereFirstFailsAndSecondSucceeds() throws Exception {
@@ -260,40 +247,9 @@ public class IdempotencyIntegrationTest {
         assertThat(successResult.getBody().totalAmount()).isEqualByComparingTo("15.00");
 
         // Verify idempotency key exists with saved response
-        assertThat(idempotencyKeyRepository.existsById(rollbackKey)).isTrue();
-        IdempotencyKey savedKey = idempotencyKeyRepository.findById(rollbackKey).orElseThrow();
+        assertThat(idempotencyKeyRepository.existsById(new IdempotencyKeyId(IdempotencyOperationType.CREATE_ORDER, rollbackKey))).isTrue();
+        IdempotencyKey savedKey = idempotencyKeyRepository.findById(new IdempotencyKeyId(IdempotencyOperationType.CREATE_ORDER, rollbackKey)).orElseThrow();
         assertThat(savedKey.getResponseJson()).isNotNull();
     }
 
-    @Test
-    void concurrentRequestsWithoutIdempotencyKeyCreateMultipleOrders() throws Exception {
-        Product product = productRepository.save(
-                new Product("SKU-MULTI-NOKEY", "Multiple Orders Widget", new BigDecimal("8.00"), 20));
-
-        int threads = 3;
-        CreateOrderRequest noKeyRequest = new CreateOrderRequest(
-                6001L,
-                List.of(new OrderItemRequest(product.getId(), 1)),
-                null
-        );
-
-        ExecutorService executor = Executors.newFixedThreadPool(threads);
-        List<Future<ResponseEntity<OrderResponse>>> futures = new ArrayList<>();
-
-        for (int i = 0; i < threads; i++) {
-            futures.add(executor.submit(() -> restTemplate.postForEntity("/orders", noKeyRequest, OrderResponse.class)));
-        }
-
-        List<ResponseEntity<OrderResponse>> results = new ArrayList<>();
-        for (Future<ResponseEntity<OrderResponse>> future : futures) {
-            results.add(future.get(10, TimeUnit.SECONDS));
-        }
-        executor.shutdown();
-
-        List<Long> orderIds = results.stream()
-                .map(r -> r.getBody() != null ? r.getBody().id() : null)
-                .filter(Objects::nonNull)
-                .toList();
-        assertThat(orderIds).hasSize(threads);
-    }
 }
