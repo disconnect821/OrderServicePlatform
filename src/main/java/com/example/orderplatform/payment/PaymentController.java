@@ -1,5 +1,6 @@
 package com.example.orderplatform.payment;
 
+import com.example.orderplatform.payment.dto.PaymentExecutionRequest;
 import com.example.orderplatform.payment.dto.PaymentRequest;
 import com.example.orderplatform.payment.dto.PaymentResponse;
 import jakarta.validation.Valid;
@@ -22,10 +23,4 @@ public class PaymentController {
         return ResponseEntity.ok(response);
     }
 
-    //Temp external call
-    @PostMapping("/execute")
-    public ResponseEntity<PaymentResponse> executePayment(@Valid @RequestBody PaymentRequest request) {
-        PaymentResponse response = paymentService.executeProviderPayment(request);
-        return ResponseEntity.ok(response);
-    }
 }

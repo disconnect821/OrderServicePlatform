@@ -18,11 +18,17 @@
 /Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/main/java/com/example/orderplatform/order/dto/OrderItemRequest.java
 /Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/main/java/com/example/orderplatform/order/dto/OrderItemResponse.java
 /Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/main/java/com/example/orderplatform/order/dto/OrderResponse.java
+/Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/main/java/com/example/orderplatform/payment/IdempotencyFinalizedException.java
 /Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/main/java/com/example/orderplatform/payment/Payment.java
 /Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/main/java/com/example/orderplatform/payment/PaymentController.java
+/Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/main/java/com/example/orderplatform/payment/PaymentExecutionService.java
+/Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/main/java/com/example/orderplatform/payment/PaymentPreparationService.java
 /Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/main/java/com/example/orderplatform/payment/PaymentRepository.java
+/Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/main/java/com/example/orderplatform/payment/PaymentResultService.java
 /Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/main/java/com/example/orderplatform/payment/PaymentService.java
 /Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/main/java/com/example/orderplatform/payment/PaymentStatus.java
+/Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/main/java/com/example/orderplatform/payment/dto/PaymentExecutionContext.java
+/Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/main/java/com/example/orderplatform/payment/dto/PaymentExecutionRequest.java
 /Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/main/java/com/example/orderplatform/payment/dto/PaymentRequest.java
 /Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/main/java/com/example/orderplatform/payment/dto/PaymentResponse.java
 /Users/disconnect/Documents/JavaClaudeProjects/order-platform/src/main/java/com/example/orderplatform/payment/provider/PayPalPaymentProvider.java

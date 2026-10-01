@@ -22,6 +22,9 @@ public class Payment {
     @Column(nullable = false)
     private PaymentStatus status;
 
+    @Column(name = "provider_payment_id")
+    private String providerPaymentId;
+
     @Column(name = "provider_name", nullable = false)
     private String providerName;
 
@@ -66,6 +69,9 @@ public class Payment {
     public String getProviderName() {
         return providerName;
     }
+
+    public String getProviderPaymentId() { return providerPaymentId; }
+    public void setProviderPaymentId(String providerPaymentId) { this.providerPaymentId = providerPaymentId; }
 
     public String getResultMessage() {
         return resultMessage;

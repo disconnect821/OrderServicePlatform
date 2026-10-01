@@ -1,0 +1,1 @@
+ALTER TABLE payment ADD COLUMN IF NOT EXISTS provider_payment_id VARCHAR(255);

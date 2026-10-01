@@ -19,6 +19,7 @@ public class PaymentProviderFactory {
 
     public PaymentProvider getProvider(String name) {
         PaymentProvider provider = providers.get(name != null ? name.toLowerCase() : "stripe");
-        return provider != null ? provider : providers.get("stripe");
+        if(provider == null) throw new IllegalArgumentException("Invalid Payment provider");
+        return provider;
     }
 }
